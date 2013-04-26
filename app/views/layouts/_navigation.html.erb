@@ -1,5 +1,11 @@
-<%= link_to "Start", root_path, :class => 'brand' %>
-<ul class="nav">
+<ul id="nav">
+	<li><%= link_to "Start", root_path %></li>
+
+	<li><a class="hsubs" href="#">Kund</a>
+		<ul class="subs">
+			<li><a href="#">Lista</a></li>
+			<li><a href="#">Ny</a></li>
+		</ul>
 	<% if user_signed_in? %>
 		<li>
 			<%= link_to 'Logga ut', destroy_user_session_path, :method =>'delete' %>
