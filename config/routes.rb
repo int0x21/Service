@@ -1,7 +1,13 @@
 Service::Application.routes.draw do
-  resources :tests, only: [:index]
+  
+  get "tests/lagerlog"
+  #match "tests/lager" => "tests#lagerlog"
+  
+  resources :tests
   devise_for :users
-root :to => "home#index"
+  
+  root :to => "home#index"
+    
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
