@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'prawn'
+gem 'thin'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

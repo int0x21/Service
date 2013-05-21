@@ -1,4 +1,6 @@
 Service::Application.routes.draw do
+  resources :customers
+
   resources :tests, only: [:index]
   devise_for :users
 root :to => "home#index"
