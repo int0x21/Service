@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @rma_note.note %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rma_note.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_rma_note_path(@rma_note) %> |
+<%= link_to 'Back', rma_notes_path %>

@@ -1,0 +1,45 @@
+<h1>Listing rmas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pufirma id</th>
+      <th>Pufiradr aid</th>
+      <th>Status</th>
+      <th>User</th>
+      <th>Ttest</th>
+      <th>Tprod</th>
+      <th>Tmech</th>
+      <th>Tprot</th>
+      <th>Warranty</th>
+      <th>Action</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rmas.each do |rma| %>
+    <tr>
+      <td><%= rma.PUFIRMA_ID %></td>
+      <td><%= rma.PUFIRADR_AID %></td>
+      <td><%= rma.status %></td>
+      <td><%= rma.user %></td>
+      <td><%= rma.ttest %></td>
+      <td><%= rma.tprod %></td>
+      <td><%= rma.tmech %></td>
+      <td><%= rma.tprot %></td>
+      <td><%= rma.warranty %></td>
+      <td><%= rma.action %></td>
+      <td><%= link_to 'Show', rma %></td>
+      <td><%= link_to 'Edit', edit_rma_path(rma) %></td>
+      <td><%= link_to 'Destroy', rma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Rma', new_rma_path %>

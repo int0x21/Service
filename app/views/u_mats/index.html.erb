@@ -1,0 +1,31 @@
+<h1>Listing u_mats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pulager id</th>
+      <th>Pulager name</th>
+      <th>Unit id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @u_mats.each do |u_mat| %>
+    <tr>
+      <td><%= u_mat.PULAGER_ID %></td>
+      <td><%= u_mat.PULAGER_Name %></td>
+      <td><%= u_mat.unit_ID %></td>
+      <td><%= link_to 'Show', u_mat %></td>
+      <td><%= link_to 'Edit', edit_u_mat_path(u_mat) %></td>
+      <td><%= link_to 'Destroy', u_mat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New U mat', new_u_mat_path %>

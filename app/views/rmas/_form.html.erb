@@ -1,0 +1,57 @@
+<%= form_for(@rma) do |f| %>
+  <% if @rma.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rma.errors.count, "error") %> prohibited this rma from being saved:</h2>
+
+      <ul>
+      <% @rma.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :PUFIRMA_ID %><br />
+    <%= f.text_field :PUFIRMA_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :PUFIRADR_AID %><br />
+    <%= f.text_field :PUFIRADR_AID %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :ttest %><br />
+    <%= f.number_field :ttest %>
+  </div>
+  <div class="field">
+    <%= f.label :tprod %><br />
+    <%= f.number_field :tprod %>
+  </div>
+  <div class="field">
+    <%= f.label :tmech %><br />
+    <%= f.number_field :tmech %>
+  </div>
+  <div class="field">
+    <%= f.label :tprot %><br />
+    <%= f.number_field :tprot %>
+  </div>
+  <div class="field">
+    <%= f.label :warranty %><br />
+    <%= f.number_field :warranty %>
+  </div>
+  <div class="field">
+    <%= f.label :action %><br />
+    <%= f.text_area :action %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

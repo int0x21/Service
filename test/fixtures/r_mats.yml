@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  PULAGER_ID: MyString
+  PULAGER_Name: MyString
+  SRow_ID: MyString
+
+two:
+  PULAGER_ID: MyString
+  PULAGER_Name: MyString
+  SRow_ID: MyString

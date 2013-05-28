@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pufirma id:</strong>
+  <%= @rma.PUFIRMA_ID %>
+</p>
+
+<p>
+  <strong>Pufiradr aid:</strong>
+  <%= @rma.PUFIRADR_AID %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @rma.status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rma.user %>
+</p>
+
+<p>
+  <strong>Ttest:</strong>
+  <%= @rma.ttest %>
+</p>
+
+<p>
+  <strong>Tprod:</strong>
+  <%= @rma.tprod %>
+</p>
+
+<p>
+  <strong>Tmech:</strong>
+  <%= @rma.tmech %>
+</p>
+
+<p>
+  <strong>Tprot:</strong>
+  <%= @rma.tprot %>
+</p>
+
+<p>
+  <strong>Warranty:</strong>
+  <%= @rma.warranty %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @rma.action %>
+</p>
+
+
+<%= link_to 'Edit', edit_rma_path(@rma) %> |
+<%= link_to 'Back', rmas_path %>

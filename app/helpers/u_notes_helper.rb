@@ -1,0 +1,2 @@
+module UNotesHelper
+end

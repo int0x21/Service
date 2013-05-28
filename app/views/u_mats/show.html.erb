@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pulager id:</strong>
+  <%= @u_mat.PULAGER_ID %>
+</p>
+
+<p>
+  <strong>Pulager name:</strong>
+  <%= @u_mat.PULAGER_Name %>
+</p>
+
+<p>
+  <strong>Unit id:</strong>
+  <%= @u_mat.unit_ID %>
+</p>
+
+
+<%= link_to 'Edit', edit_u_mat_path(@u_mat) %> |
+<%= link_to 'Back', u_mats_path %>

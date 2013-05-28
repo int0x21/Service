@@ -1,0 +1,31 @@
+<h1>Listing r_mats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pulager id</th>
+      <th>Pulager name</th>
+      <th>Srow id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_mats.each do |r_mat| %>
+    <tr>
+      <td><%= r_mat.PULAGER_ID %></td>
+      <td><%= r_mat.PULAGER_Name %></td>
+      <td><%= r_mat.SRow_ID %></td>
+      <td><%= link_to 'Show', r_mat %></td>
+      <td><%= link_to 'Edit', edit_r_mat_path(r_mat) %></td>
+      <td><%= link_to 'Destroy', r_mat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New R mat', new_r_mat_path %>

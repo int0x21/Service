@@ -1,0 +1,29 @@
+<%= form_for(@r_mat) do |f| %>
+  <% if @r_mat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@r_mat.errors.count, "error") %> prohibited this r_mat from being saved:</h2>
+
+      <ul>
+      <% @r_mat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :PULAGER_ID %><br />
+    <%= f.text_field :PULAGER_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :PULAGER_Name %><br />
+    <%= f.text_field :PULAGER_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :SRow_ID %><br />
+    <%= f.text_field :SRow_ID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

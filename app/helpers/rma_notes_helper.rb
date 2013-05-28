@@ -1,0 +1,2 @@
+module RmaNotesHelper
+end

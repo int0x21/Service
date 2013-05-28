@@ -1,0 +1,45 @@
+<h1>Listing units</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Srow id</th>
+      <th>Rma id</th>
+      <th>Ttest</th>
+      <th>Tprod</th>
+      <th>Tmech</th>
+      <th>Tprot</th>
+      <th>Warranty</th>
+      <th>Action</th>
+      <th>Pulager id</th>
+      <th>Artname</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @units.each do |unit| %>
+    <tr>
+      <td><%= unit.SRow_ID %></td>
+      <td><%= unit.rma_ID %></td>
+      <td><%= unit.ttest %></td>
+      <td><%= unit.tprod %></td>
+      <td><%= unit.tmech %></td>
+      <td><%= unit.tprot %></td>
+      <td><%= unit.warranty %></td>
+      <td><%= unit.action %></td>
+      <td><%= unit.PULAGER_ID %></td>
+      <td><%= unit.artname %></td>
+      <td><%= link_to 'Show', unit %></td>
+      <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
+      <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Unit', new_unit_path %>

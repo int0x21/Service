@@ -1,0 +1,29 @@
+<h1>Listing u_notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Note</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @u_notes.each do |u_note| %>
+    <tr>
+      <td><%= u_note.note %></td>
+      <td><%= u_note.user %></td>
+      <td><%= link_to 'Show', u_note %></td>
+      <td><%= link_to 'Edit', edit_u_note_path(u_note) %></td>
+      <td><%= link_to 'Destroy', u_note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New U note', new_u_note_path %>

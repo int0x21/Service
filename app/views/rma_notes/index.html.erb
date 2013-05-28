@@ -1,0 +1,29 @@
+<h1>Listing rma_notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Note</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rma_notes.each do |rma_note| %>
+    <tr>
+      <td><%= rma_note.note %></td>
+      <td><%= rma_note.user %></td>
+      <td><%= link_to 'Show', rma_note %></td>
+      <td><%= link_to 'Edit', edit_rma_note_path(rma_note) %></td>
+      <td><%= link_to 'Destroy', rma_note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Rma note', new_rma_note_path %>

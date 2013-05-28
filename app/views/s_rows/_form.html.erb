@@ -1,0 +1,53 @@
+<%= form_for(@s_row) do |f| %>
+  <% if @s_row.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@s_row.errors.count, "error") %> prohibited this s_row from being saved:</h2>
+
+      <ul>
+      <% @s_row.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rma_ID %><br />
+    <%= f.text_field :rma_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :ttest %><br />
+    <%= f.number_field :ttest %>
+  </div>
+  <div class="field">
+    <%= f.label :tprod %><br />
+    <%= f.number_field :tprod %>
+  </div>
+  <div class="field">
+    <%= f.label :tmech %><br />
+    <%= f.number_field :tmech %>
+  </div>
+  <div class="field">
+    <%= f.label :tprot %><br />
+    <%= f.number_field :tprot %>
+  </div>
+  <div class="field">
+    <%= f.label :warranty %><br />
+    <%= f.number_field :warranty %>
+  </div>
+  <div class="field">
+    <%= f.label :action %><br />
+    <%= f.text_area :action %>
+  </div>
+  <div class="field">
+    <%= f.label :PULAGER_ID %><br />
+    <%= f.text_field :PULAGER_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :artname %><br />
+    <%= f.text_field :artname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

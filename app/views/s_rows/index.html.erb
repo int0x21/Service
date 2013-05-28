@@ -1,0 +1,43 @@
+<h1>Listing s_rows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rma id</th>
+      <th>Ttest</th>
+      <th>Tprod</th>
+      <th>Tmech</th>
+      <th>Tprot</th>
+      <th>Warranty</th>
+      <th>Action</th>
+      <th>Pulager id</th>
+      <th>Artname</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @s_rows.each do |s_row| %>
+    <tr>
+      <td><%= s_row.rma_ID %></td>
+      <td><%= s_row.ttest %></td>
+      <td><%= s_row.tprod %></td>
+      <td><%= s_row.tmech %></td>
+      <td><%= s_row.tprot %></td>
+      <td><%= s_row.warranty %></td>
+      <td><%= s_row.action %></td>
+      <td><%= s_row.PULAGER_ID %></td>
+      <td><%= s_row.artname %></td>
+      <td><%= link_to 'Show', s_row %></td>
+      <td><%= link_to 'Edit', edit_s_row_path(s_row) %></td>
+      <td><%= link_to 'Destroy', s_row, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New S row', new_s_row_path %>

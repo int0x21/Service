@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rma_ID: MyString
+  ttest: 1
+  tprod: 1
+  tmech: 1
+  tprot: 1
+  warranty: 1
+  action: MyText
+  PULAGER_ID: MyString
+  artname: MyString
+
+two:
+  rma_ID: MyString
+  ttest: 1
+  tprod: 1
+  tmech: 1
+  tprot: 1
+  warranty: 1
+  action: MyText
+  PULAGER_ID: MyString
+  artname: MyString

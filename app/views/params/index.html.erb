@@ -1,0 +1,29 @@
+<h1>Listing params</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @params.each do |param| %>
+    <tr>
+      <td><%= param.name %></td>
+      <td><%= param.value %></td>
+      <td><%= link_to 'Show', param %></td>
+      <td><%= link_to 'Edit', edit_param_path(param) %></td>
+      <td><%= link_to 'Destroy', param, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Param', new_param_path %>
