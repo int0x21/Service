@@ -11,7 +11,95 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130424091940) do
+ActiveRecord::Schema.define(version: 20130527070410) do
+
+  create_table "params", force: true do |t|
+    t.string   "name"
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "r_mats", force: true do |t|
+    t.string   "PULAGER_ID"
+    t.string   "PULAGER_Name"
+    t.string   "SRow_ID"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rma_notes", force: true do |t|
+    t.text     "note"
+    t.string   "user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rmas", force: true do |t|
+    t.string   "PUFIRMA_ID"
+    t.string   "PUFIRADR_AID"
+    t.string   "status"
+    t.string   "user"
+    t.integer  "ttest"
+    t.integer  "tprod"
+    t.integer  "tmech"
+    t.integer  "tprot"
+    t.integer  "warranty"
+    t.text     "action"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "s_rows", force: true do |t|
+    t.string   "rma_ID"
+    t.integer  "ttest"
+    t.integer  "tprod"
+    t.integer  "tmech"
+    t.integer  "tprot"
+    t.integer  "warranty"
+    t.text     "action"
+    t.string   "PULAGER_ID"
+    t.string   "artname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sr_notes", force: true do |t|
+    t.text     "note"
+    t.string   "user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "u_mats", force: true do |t|
+    t.string   "PULAGER_ID"
+    t.string   "PULAGER_Name"
+    t.integer  "unit_ID"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "u_notes", force: true do |t|
+    t.text     "note"
+    t.string   "user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "units", force: true do |t|
+    t.string   "SRow_ID"
+    t.string   "rma_ID"
+    t.integer  "ttest"
+    t.integer  "tprod"
+    t.integer  "tmech"
+    t.integer  "tprot"
+    t.integer  "warranty"
+    t.text     "action"
+    t.string   "PULAGER_ID"
+    t.string   "artname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

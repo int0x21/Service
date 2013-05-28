@@ -1,5 +1,21 @@
 Service::Application.routes.draw do
-  resources :customers
+  resources :rma_notes
+
+  resources :u_notes
+
+  resources :sr_notes
+
+  resources :u_mats
+
+  resources :r_mats
+
+  resources :params
+
+  resources :units
+
+  resources :s_rows
+
+  resources :rmas
 
   resources :tests, only: [:index]
   devise_for :users
