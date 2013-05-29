@@ -1,4 +1,6 @@
 Service::Application.routes.draw do
+  resources :customers
+
   resources :rma_notes
 
   resources :u_notes
